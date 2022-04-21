@@ -48,3 +48,26 @@ with open("task5_5.txt", 'w') as f:
 with open("task5_5.txt", 'r') as f:
     s = list(map(int, f.read().split()))
 print(sum(s))
+
+# 6
+di = dict()
+with open("task5_6.txt", 'r', encoding="utf-8") as f:
+    for i in range(4):
+        summ = 0
+        s = list(f.readline().split(" - "))
+        t = s[1].split()
+        for x in t:
+            summ += int(x[:len(x)-5])
+        di[s[0]] = summ
+print(di)
+
+# 7
+with open("task5_7.txt", 'r', encoding="utf-8") as f:
+    summ = 0
+    dell = 0
+    for i in range(5):
+        s = list(map(int, list(f.readline().split())[2:]))
+        if s[0] > s[1]:
+            summ += s[0]-s[1]
+            dell += 1
+print(summ/dell)
