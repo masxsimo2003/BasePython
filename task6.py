@@ -3,7 +3,7 @@ from task6_classes import *
 
 # 1
 tl = TrafficLight()
-# tl.running()
+tl.running()
 
 # 2
 r = Road(20, 5000)
